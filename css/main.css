@@ -5,7 +5,7 @@
 
     /* Primary */
 
-        --soft-cyan : hsl(174, 77%, 80%);
+        --soft-cyan : #a5f3eb;
         /* (Full Slider Bar) */
         --strong-cyan : hsl(174, 86%, 45%);
         /* (Slider Backround) */
@@ -23,7 +23,7 @@
         /* (Pricing Component Background) */
         --very-pale-blue : hsl(230, 100%, 99%);
         /* (Main Background) */
-        --light-grayish-blue: hsl(224, 65%, 95%);
+        --light-grayish-blue: #eaeefb;
         /* (Empty Slider Bar) */
         --light-grayish-blue : hsl(223, 50%, 87%);
         /* (Toggle Background) */
@@ -101,7 +101,7 @@ img.circle-pattern{
  z-index: -2;
 }
 
-.pricing-component-container{
+.price-component-container{
     width:100%;
     height:480px;
     position: relative;
@@ -111,11 +111,156 @@ img.circle-pattern{
 
 }
 
+.pricing{
+    width:100%;
+    height:auto;
+    padding:2rem 1.5rem;
+    text-align: center;
+}
+
+
+ 
+
+ .slider-container{
+     width:100%;
+     height:auto;
+     margin:2rem 0;
+ }
+
+ .slider{
+     -webkit-appearance: none;
+     background:transparent;
+     width:100%;
+     height:8px;
+     background:linear-gradient(90deg, #a5f3eb 40%, #eaeefb 40%);
+     outline:none;
+     border-radius:25px;
+ }
+
+ .slider::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  } 
+
+ .slider::-webkit-slider-thumb {
+   -webkit-appearance: none; 
+  width:40px;
+  height:40px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--strong-cyan);
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  box-shadow: 0px 10px 20px 5px var(--soft-cyan);
+  }
+
+
+
+  .slider::focus{
+    outline: none;
+  }
+
+  .month-price{
+      width:100%; 
+      height:auto;
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .month-price #price{
+        font-size: 2.3rem;
+    }
+
+    .month-price p:nth-child(2){
+        margin-left:15px;
+        font-family: inherit;
+    }
+
+
+    .billing{
+        width:100%;
+        height:auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .billing p{font-size:12px;}
+
+    .billing p#discount{
+        background:var(--light-grayish-red);
+        color:var(--light-red);
+        padding:3px 10px;
+        border-radius: 10px;
+
+    }
+
+.billing .checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.billing .label{
+    width: 43px;
+    height: 22px;
+    display: flex;
+    border-radius: 50px;
+    background-color: var(--light-grayish-blue);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin:0 3px;
+    padding: 5px;
+    transition: background-color 0.5s ease-in;
+}
+
+.billing .label .ball{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.discount{
+    width:auto;
+    border-radius:20px;
+    padding:5px 10px;
+    background-color:var(--light-grayish-red);
+    color:var(--light-red);
+    vertical-align:middle;
+    margin-left:10px;
+}
 .price-info{
+    width: 100%;
+    height:auto;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
+.price-perks{
+    font-size: 15px;
+    text-align: center;
+}
+.icon-check{
+    display: inline-block;
+    margin-right:15px;
+}
+
+
 

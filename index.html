@@ -31,19 +31,47 @@
     </header>
 
     <main>
-      <div class="pricing-component-container">
+      <div class="price-component-container">
         <section>
-          <div class="pricing-slider-component"></div>
+
+          <div class="pricing">
+            <p>100K Pageviews</p>
+            <div class="slider-container">
+              <input type="range" name="slider" class="slider" min="0" max="36" value="1">
+            </div>
+
+            <div class="month-price">
+              <p id="price">$16.00</p> 
+              <p>/ month</p>
+            </div>
+
+            <div class="billing">
+         
+                <p>Monthly Billing</p>
+                <input type="checkbox" name="" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                  <div class="ball"></div>
+                </label>
+                <p>Yearly Billing</p>
+               <p id="discount">
+                -25%
+               </p>
+
+
+              </div>
+            </div>
+          
+
         </section>
 
         <section>
           <div class="price-info">
             <div class="price-perks">
-              <p><span id="chk-mrk"></span> Websites</p>
-              <p>100% Data Ownership</p>
-              <p>Email reports</p>
+              <div id="perk1"><img src="/images/icon-check.svg" class="icon-check" alt="">Unlimited Websites</div>
+              <div id="perk2"><img src="/images/icon-check.svg" class="icon-check" alt="">100% data ownership</div>
+              <div id="perk3"><img src="/images/icon-check.svg" class="icon-check" alt="">Email reports</div>
             </div>
-            <button type="submit"></button>
+            <button type="submit">Start my trail</button>
           </div>
         </section>
       </div>
