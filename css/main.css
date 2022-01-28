@@ -1,4 +1,4 @@
-@import url(/css/style_resets.css);
+@import url(./css/style_resets.css);
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 
 :root{
@@ -56,7 +56,7 @@ body{
     height: 420px;
     position:absolute;
     top:0;
-    background-image: url("/images/bg-pattern.svg");
+    background-image: url("./images/bg-pattern.svg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -170,7 +170,7 @@ img.circle-pattern{
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--strong-cyan);
-  background-image: url(/images/icon-slider.svg);
+  background-image: url(./images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
