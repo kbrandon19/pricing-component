@@ -1,4 +1,4 @@
-@import url(./css/style_resets.css);
+@import url(/css/style_resets.css);
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 
 :root{
@@ -56,7 +56,7 @@ body{
     height: 420px;
     position:absolute;
     top:0;
-    background-image: url("./images/bg-pattern.svg");
+    background-image: url("/images/bg-pattern.svg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -77,8 +77,7 @@ header,main{
     width:100%;
     height:150px;
     position: relative;
-    /* background-color: crimson; */
-    margin-bottom:2rem;
+    margin-bottom:3rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -113,7 +112,7 @@ img.circle-pattern{
     padding-bottom:2rem;
     background-color: #ffffff;
     border-radius:10px;
-    box-shadow: 0px 15px 20px -5px rgba(66, 103, 167, 0.3);
+    box-shadow: 0px 5px 20px -10px rgb(66 103 167 / 30%);
 
 }
 
@@ -142,11 +141,14 @@ img.circle-pattern{
  }
 
  .slider{
+    appearance: none;
      -webkit-appearance: none;
+     -moz-appearance: none;
      background:transparent;
+     display: block;
      width:100%;
      height:8px;
-     background:linear-gradient(90deg, rgb(234, 238, 251) 0%, rgb(234, 238, 251) 0%);
+     background:linear-gradient(90deg, hsl(174, 76%, 80%) 0% 44%, rgb(234, 238, 251) 44% 100%);
      outline:none;
      border-radius:12px;
  }
@@ -162,15 +164,15 @@ img.circle-pattern{
   } 
 
  .slider::-webkit-slider-thumb {
+    appearance: none;
    -webkit-appearance: none; 
-   appearance: none;
   width:40px;
   height:40px;
   position: relative;
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--strong-cyan);
-  background-image: url(./images/icon-slider.svg);
+  background-image: url(/images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
