@@ -5,7 +5,7 @@
 
     /* Primary */
 
-        --soft-cyan : #a5f3eb;
+        --soft-cyan : hsl(174, 76%, 80%);
         /* (Full Slider Bar) */
         --strong-cyan : hsl(174, 86%, 45%);
         /* (Slider Backround) */
@@ -89,10 +89,15 @@ header,main{
 .content-text h1{
     font-size: 1.2rem;
     margin-bottom:.5rem;
+    font-weight: var(--fw-semibold);
+    color:var(--dark-desaturated-blue);
 }
 
 .content-text p{
     font-size:15px;
+    color:var(--grayish-blue);
+    font-weight: var(--fw-semibold);
+    font-size:12px;
 }
 
 
@@ -103,8 +108,9 @@ img.circle-pattern{
 
 .price-component-container{
     width:100%;
-    height:480px;
+    height:auto;
     position: relative;
+    padding-bottom:2rem;
     background-color: #ffffff;
     border-radius:10px;
     box-shadow: 0px 15px 20px -5px rgba(66, 103, 167, 0.3);
@@ -118,6 +124,14 @@ img.circle-pattern{
     text-align: center;
 }
 
+.pricing p{color:var(--grayish-blue);font-size: 12px;}
+
+.pricing p#pageview{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   
+
+}
 
  
 
@@ -132,9 +146,9 @@ img.circle-pattern{
      background:transparent;
      width:100%;
      height:8px;
-     background:linear-gradient(90deg, #a5f3eb 40%, #eaeefb 40%);
+     background:linear-gradient(90deg, rgb(234, 238, 251) 0%, rgb(234, 238, 251) 0%);
      outline:none;
-     border-radius:25px;
+     border-radius:12px;
  }
 
  .slider::-ms-track {
@@ -149,6 +163,7 @@ img.circle-pattern{
 
  .slider::-webkit-slider-thumb {
    -webkit-appearance: none; 
+   appearance: none;
   width:40px;
   height:40px;
   position: relative;
@@ -164,10 +179,6 @@ img.circle-pattern{
 
 
 
-  .slider::focus{
-    outline: none;
-  }
-
   .month-price{
       width:100%; 
       height:auto;
@@ -177,34 +188,39 @@ img.circle-pattern{
       align-items: center;
     }
 
-    .month-price #price{
+    .month-price span#price{
         font-size: 2.3rem;
+        color:var(--dark-desaturated-blue);
+        margin-right:8px;
     }
 
     .month-price p:nth-child(2){
         margin-left:15px;
         font-family: inherit;
+        
     }
 
 
-    .billing{
+.billing{
         width:100%;
         height:auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-    }
+        padding:0 1rem;
+}
 
-    .billing p{font-size:12px;}
+.billing p{font-size:11px; font-weight: var(--fw-semibold);color:var(--grayish-blue);}
 
-    .billing p#discount{
+.billing p#discount{
         background:var(--light-grayish-red);
         color:var(--light-red);
-        padding:3px 10px;
-        border-radius: 10px;
+        padding:3px 8px;
+        border-radius: 25px;
+        margin-left:10px;
 
-    }
+}
 
 .billing .checkbox{
     opacity: 0;
@@ -220,7 +236,7 @@ img.circle-pattern{
     position: relative;
     display: flex;
     align-items: center;
-    margin:0 3px;
+    margin:0 10px;
     padding: 5px;
     transition: background-color 0.5s ease-in;
 }
@@ -234,20 +250,15 @@ img.circle-pattern{
     border-radius: 50%;
     transition: transform 0.5s ease;
 }
+.billing .checkbox:checked + .label .ball {
+            transform: translateX(18px);
+  }
 
-.discount{
-    width:auto;
-    border-radius:20px;
-    padding:5px 10px;
-    background-color:var(--light-grayish-red);
-    color:var(--light-red);
-    vertical-align:middle;
-    margin-left:10px;
-}
 .price-info{
     width: 100%;
     height:auto;
     display:flex;
+    margin-top:3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -257,9 +268,25 @@ img.circle-pattern{
     font-size: 15px;
     text-align: center;
 }
+
+.price-perks >*{
+    font-size: 11px;
+    margin:.5rem 0;
+    color:var(--grayish-blue);
+}
 .icon-check{
     display: inline-block;
     margin-right:15px;
+}
+
+.btn{
+    margin-top:1rem;
+    padding:10px 40px;
+    border:none;
+    border-radius: 25px;
+    background:var(--dark-desaturated-blue);
+    color:var(--pale-blue);
+    font-size: 12px;
 }
 
 
