@@ -19,7 +19,7 @@
 
     /* Neutral */
 
-        --white: hsl (0, 0%, 100%);
+        --white: hsl(0, 0%, 100%);
         /* (Pricing Component Background) */
         --very-pale-blue : hsl(230, 100%, 99%);
         /* (Main Background) */
@@ -65,12 +65,14 @@ body{
     
 }
 
-/* Font size (Introductory Paragraph): 15px  */
 
 header,main{
     width:100%;
     height:auto;
     padding:0 1.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-text{
@@ -96,7 +98,7 @@ header,main{
     font-size:15px;
     color:var(--grayish-blue);
     font-weight: var(--fw-semibold);
-    font-size:12px;
+    font-size:.75rem;
 }
 
 
@@ -106,6 +108,7 @@ img.circle-pattern{
 }
 
 .price-component-container{
+    max-width: 540px;
     width:100%;
     height:auto;
     position: relative;
@@ -163,13 +166,16 @@ img.circle-pattern{
     color: transparent;
   } 
 
+  .slider::-webkit-slider-thumb:hover{
+      cursor: pointer;
+  }
+
  .slider::-webkit-slider-thumb {
     appearance: none;
    -webkit-appearance: none; 
   width:40px;
   height:40px;
   position: relative;
-  cursor: pointer;
   border-radius: 50%;
   background-color: var(--strong-cyan);
   background-image: url(/images/icon-slider.svg);
@@ -223,6 +229,9 @@ img.circle-pattern{
         margin-left:10px;
 
 }
+.billing span#desktop-discount{
+    display:none;
+}
 
 .billing .checkbox{
     opacity: 0;
@@ -252,9 +261,14 @@ img.circle-pattern{
     border-radius: 50%;
     transition: transform 0.5s ease;
 }
+
+.billing .checkbox:checked + .label{
+    background-color:var(--strong-cyan);
+}
 .billing .checkbox:checked + .label .ball {
             transform: translateX(18px);
   }
+
 
 .price-info{
     width: 100%;
@@ -289,7 +303,60 @@ img.circle-pattern{
     background:var(--dark-desaturated-blue);
     color:var(--pale-blue);
     font-size: 12px;
+    letter-spacing: .5px;
+    transition: color .5s ease;
 }
 
+.btn:hover{
+    color:var(--white);
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width:48rem){
+    .bg-pattern{
+        height: 435px;
+        border-bottom-left-radius: 0%;
+    }
+   
+  
+    .content-text h1{
+        font-size:2.2rem;
+    }
+
+    .content-text br#line-break{
+        display: none;
+    }
+
+    .content-text p{
+        font-size: 1.1rem;
+    }
+
+    .billing p#discount{
+        padding:3px 10px;
+    }
+    .billing span#desktop-discount{
+        display:inline-block;
+    }
+    .price-info{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2.5rem;
+        }
+    .price-perks{
+        text-align: left;
+    }
+
+}
+
+
+
+
+@media only screen and (min-width:90rem){
+    .bg-pattern{
+        height: 450px;
+        border-bottom-left-radius: 0%;
+    }
+}
 
 
