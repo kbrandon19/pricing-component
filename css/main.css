@@ -122,7 +122,7 @@ img.circle-pattern{
 }
 
 .pricing{
-    width:100%;
+    /* width:100%; */
     height:auto;
     padding:2rem 1.5rem;
     text-align: center;
@@ -216,7 +216,7 @@ img.circle-pattern{
 
 
 .billing{
-        width:100%;
+        /* width:100%; */
         height:auto;
         display: flex;
         flex-direction: row;
@@ -281,7 +281,7 @@ img.circle-pattern{
   }
 
 .price-info{
-    width: 100%;
+    /* width: 100%; */
     height:auto;
     display:flex;
     margin-top:3rem;
