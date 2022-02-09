@@ -244,9 +244,6 @@ img.circle-pattern{
     display: none;
 }
 
-
-
-
 .billing .checkbox{
     opacity: 0;
     position: absolute;
@@ -282,9 +279,6 @@ img.circle-pattern{
 .billing .checkbox:checked + .label .ball {
             transform: translateX(18px);
   }
-
-
-
 
 .price-info{
     width: 100%;
