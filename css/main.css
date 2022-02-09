@@ -37,8 +37,7 @@
         --fw-xbold:800;
 }
 
-.show{visibility: visible;}
-.hide{visibility: hidden;}
+
 
 body{
     font-family: 'Manrope',sans-serif;
@@ -228,6 +227,9 @@ img.circle-pattern{
 
 .billing p{font-size:11px; font-weight: var(--fw-semibold);color:var(--grayish-blue);}
 
+.billing .discount-tag{
+    display:none;
+}
 
 .billing p#discount{
         background:var(--light-grayish-red);
@@ -237,6 +239,13 @@ img.circle-pattern{
         margin-left:10px;
 
 }
+
+.billing p span#desktop-discount{
+    display: none;
+}
+
+
+
 
 .billing .checkbox{
     opacity: 0;
@@ -273,6 +282,8 @@ img.circle-pattern{
 .billing .checkbox:checked + .label .ball {
             transform: translateX(18px);
   }
+
+
 
 
 .price-info{
@@ -318,12 +329,13 @@ img.circle-pattern{
 }
 
 
+/* tablet 768px */
+
 @media only screen and (min-width:48rem){
     .bg-pattern{
         height: 435px;
         border-bottom-left-radius: 0%;
     }
-   
   
     .content-text h1{
         font-size:2.2rem;
@@ -340,9 +352,10 @@ img.circle-pattern{
     .billing p#discount{
         padding:3px 10px;
     }
-    .billing span#desktop-discount{
-        display:inline-block;
+    .billing p span#desktop-discount{
+        display: inline-block;
     }
+   
     .price-info{
         flex-direction: row;
         justify-content: space-between;
@@ -355,12 +368,16 @@ img.circle-pattern{
 }
 
 
-
+/* desktop 1440px */
 
 @media only screen and (min-width:90rem){
     .bg-pattern{
         height: 450px;
         border-bottom-left-radius: 0%;
+    }
+
+    .billing p span#desktop-discount{
+        display: inline-block;
     }
 }
 
