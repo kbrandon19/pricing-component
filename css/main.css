@@ -37,6 +37,9 @@
         --fw-xbold:800;
 }
 
+.show{visibility: visible;}
+.hide{visibility: hidden;}
+
 body{
     font-family: 'Manrope',sans-serif;
     letter-spacing: .5px;
@@ -225,6 +228,7 @@ img.circle-pattern{
 
 .billing p{font-size:11px; font-weight: var(--fw-semibold);color:var(--grayish-blue);}
 
+
 .billing p#discount{
         background:var(--light-grayish-red);
         color:var(--light-red);
@@ -232,9 +236,6 @@ img.circle-pattern{
         border-radius: 25px;
         margin-left:10px;
 
-}
-.billing span#desktop-discount{
-    display:none;
 }
 
 .billing .checkbox{
@@ -362,5 +363,6 @@ img.circle-pattern{
         border-bottom-left-radius: 0%;
     }
 }
+
 
 

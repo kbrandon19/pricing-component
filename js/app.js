@@ -1,6 +1,8 @@
 let slider = document.getElementById('slider');
 let output = document.getElementById('price');
 let pageView = document.getElementById('pageview');
+let checkBox = document.getElementById('checkbox');
+let discountTag = document.getElementById('discount');
 
 let defaultPageView = " ";
 /*
@@ -11,6 +13,8 @@ Here are the different page view ranges and the corresponding monthly price tota
 - 100K pageviews / $16 per month
 - 500k pageviews / $24 per month
 - 1M pageviews / $36 per month
+
+
 
 If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
 */
@@ -30,14 +34,17 @@ slider.oninput =  function(){
     let hundredK = '100K pageviews';
     let fivehundredK = '500K pageviews';
     let oneMil = '1M pageviews';
+    let zero = `No Pageviews for you :(`;
 
     if(slider.value == 8){
         pageView.textContent = tenK;
     }
+    else if(slider.value == 0){
+        pageView.textContent = zero;
+    }
     else if(slider.value == 12){
         pageView.textContent = fiftyK;
     }
-    
     else if(slider.value == 16){
         pageView.textContent = hundredK;
     }
@@ -73,5 +80,8 @@ slider.addEventListener('input',function(){
     
 
 });
+
+//toggle function
+
 
 
