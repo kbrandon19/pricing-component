@@ -184,7 +184,7 @@ img.circle-pattern{
   position: relative;
   border-radius: 50%;
   background-color: var(--strong-cyan);
-  background-image: url(/images/icon-slider.svg);
+  background-image: url(./images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
